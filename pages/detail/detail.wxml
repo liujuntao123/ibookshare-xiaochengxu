@@ -1,0 +1,56 @@
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-form-preview">
+            <view class="weui-form-preview__hd">
+                <text>{{bookData.bookName}}</text>
+            </view>
+            <view class="weui-form-preview__bd">
+                <view class="weui-form-preview__item">
+                    <view class="left-block">
+                        <image mode="aspectFit" src="{{bookData.bookImg}}"></image>
+                    </view>
+                    <view class="right-block">
+                        <view class="weui-form-preview__label">作者</view>
+                        <view class="weui-form-preview__value">{{bookData.bookAuthor}}</view>
+                    </view>
+                    <view class="right-block">
+                        <view class="weui-form-preview__label">格式</view>
+                        <view class="weui-form-preview__value">{{bookData.bookFormat}}</view>
+                    </view>
+                    <view class="right-block">
+                        <view class="weui-form-preview__label">标签</view>
+                        <view class="weui-form-preview__value">{{bookData.bookTag}}</view>
+                    </view>
+                    <view class="right-block">
+                        <view class="weui-form-preview__label">时间</view>
+                        <view class="weui-form-preview__value">{{bookData.bookTime}}</view>
+                    </view>
+                    <view class="right-block">
+                        <view class="weui-form-preview__label">大小</view>
+                        <view class="weui-form-preview__value">{{bookData.bookSize}}</view>
+                    </view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <text>{{bookData.bookIntroduction}}</text>
+                </view>
+                <view class="weui-form-preview__item">
+                    <text>{{bookData.authorIntroduction}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="weui-form-preview__ft operation-box">
+        <button bindtap="handleCopyCode" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">
+            复制提取码
+        </button>
+        <!-- TODO:外链跳转不支持个人小程序，目前先保留此功能。后续两个方案：1.申请企业认证 2.给用户复制链接和密码，自助操作 -->
+        <navigator url="/pages/download/download?download_url={{bookData.bookDownloadUrl}}" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">
+            <button class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">
+                前往下载
+            </button>
+        </navigator>
+        <button bindtap="handleOnCollect" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">
+            收藏
+        </button>
+    </view>
+</view>

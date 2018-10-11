@@ -1,0 +1,28 @@
+/* pages/list/list.wxss */
+/*!
+ * WeUI v1.1.1 (https://github.com/weui/weui-wxss)
+ * Copyright 2017 Tencent, Inc.
+ * Licensed under the MIT license
+ */
+
+
+.kind-list__item {
+    margin: 2px 0;
+    background-color: #fff;
+    border-radius: 2px;
+    overflow: hidden;
+}
+.kind-list__item:first-child {
+    margin-top: 0;
+}
+.kind-list__img {
+    width: 50px;
+    height: 65px;
+    margin-right: 20px;
+}
+.kind-list__item-hd {
+    padding: 20px;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+

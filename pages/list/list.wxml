@@ -1,0 +1,20 @@
+<!-- pages/list/list.wxml -->
+<view class="page">
+    <view class="page__bd ">
+        <view class="kind-list">
+            <navigator wx:for="{{list}}" wx:key="id" url="/pages/detail/detail?id={{item.id}}">
+                <block>
+                    <view class="kind-list__item">
+                        <view class="weui-flex kind-list__item-hd">
+                            <image class="kind-list__img" src="{{item.bookImg}}"></image>
+                            <view class="weui-flex__item">
+                                <view>{{item.bookName}}</view>
+                                <view>作者：{{item.bookAuthor}}</view>
+                                </view>
+                        </view>
+                    </view>
+                </block>
+            </navigator>
+        </view>
+    </view>
+</view>

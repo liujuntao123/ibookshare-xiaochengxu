@@ -1,0 +1,50 @@
+<view class="page">
+    <view class="page__bd">
+        <view bindtap="onToggleOperation" class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_access">
+                <view class="weui-cell__bd">标题文字</view>
+                <view class="weui-cell__ft">说明文字</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </view>
+        </view>
+        <view  class="weui-cells weui-cells_operation-box {{isOperationShow?'weui-cells_operation-box_show':''}}">
+            <!-- <view class="weui-form-preview__ft"> -->
+                <navigator  class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">
+                    <button type="default" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">
+                    详情
+                </button>
+                </navigator>
+                <navigator  class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">
+                    <button type="primary" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">
+                    下载
+                </button>
+                </navigator>
+                <!-- TODO:外链跳转不支持个人小程序，目前先保留此功能。后续两个方案：1.申请企业认证 2.给用户复制链接和密码，自助操作 -->
+                <!-- <web-view src="https://pan.baidu.com/s/1XCRktKwnuEPSczMzFkM-hQ#list/path=%2F" class="weui-form-preview__btn weui-form-preview__btn_default" hover-class="weui-form-preview__btn_active">
+                    前往下载
+                </web-view> -->
+                <button type="warn" bindtap="handleOnCollect" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">
+                    删除
+                </button>
+            <!-- </view> -->
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_access">
+                <view class="weui-cell__bd">标题文字</view>
+                <view class="weui-cell__ft">说明文字</view>
+            </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_access">
+                <view class="weui-cell__bd">标题文字</view>
+                <view class="weui-cell__ft">说明文字</view>
+            </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">标题文字</view>
+                <view class="weui-cell__ft">说明文字</view>
+            </view>
+        </view>
+    </view>
+</view>
